@@ -1,0 +1,16 @@
+fieldset {
+  width: 800px;
+
+  table {
+    width: 100%; 
+
+    thead {
+      background-color: aqua;
+      font-weight: bold;
+    }
+
+    td {
+      padding: 5px;
+    }
+  }
+}

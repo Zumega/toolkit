@@ -1,0 +1,11 @@
+.smartRadioGroupContainer {
+  label {
+    &:nth-child(odd) {}
+    &:first-child {}
+    &:last-child {}
+    &:only-child {}
+    &.checked {}
+
+    .radio {}
+  }
+}

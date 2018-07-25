@@ -1,0 +1,58 @@
+.fancyDropDownContainer {
+  position: relative;
+
+  .fancyDropDownDisplay {
+    cursor: pointer;
+
+    .fancyDropDownButton {
+      float: right;
+      display: inline-block;
+      height: 1em;
+      width: 1em;
+      text-align: center;
+      line-height: 1em;
+      transform: rotate(90deg);
+
+      &.fdd_active {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  ul.fancyDropDown {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+
+    &.fdd_active {
+      display: block;
+    }
+    &.fdd_inactive {
+      display: none;
+    }
+
+    .fancyDropDownItem {
+      &:hover {
+        cursor: pointer;
+
+        &.fdd_selected {
+          background-color: transparent;
+          cursor: text;
+        }
+      }
+      &.fdd_selected {
+        color: red;
+      }
+      &.fdd_disabled {
+        color: grey;
+        background: transparent;
+
+        &:hover {
+          background-color: transparent;
+          cursor: text;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,13 @@
+.smartTextareaContainer {
+  .textarea {}
+
+  .counter {
+    &.error {
+      .currentLength,
+      .maxLength {}
+    }
+    &.warn {
+      .currentLength {}
+    }
+  }
+}

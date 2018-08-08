@@ -1,27 +1,29 @@
 import { _CACHE_ } from './cache_base';
 
-export const message = new Messages();
+export default class Messages {
+  constructor() {
+    this.cache = _CACHE_.messages;
+  }
 
-function Messages() {
-  const cache = _CACHE_.messages;
-
-  this.sub = (name, fn) => {
-    if (cache[name]) {
-      return typeof fn === 'function' ? fn(cache[name]) : cache[name];
+  pub = (name = 'NULL', value = '') => {
+    this.cache[name] = value;
+  };
+  
+  sub = (name, fn) => {
+    if (this.cache[name]) {
+      return typeof fn === 'function' ? fn(this.cache[name]) : this.cache[name];
     }
 
     return new Error(`NOTHING GOOD: ${name}`);
   };
 
-  this.pub = (name = 'NULL', value = '') => {
-    cache[name] = value;
-  };
-
-  this.clear = (name) => {
+  clear = (name) => {
     if (name) {
-      return cache[name] = undefined;
+      return this.cache[name] = undefined;
     }
 
     return _CACHE_.messages = {};
   };
 }
+
+// export const message = new Messages();

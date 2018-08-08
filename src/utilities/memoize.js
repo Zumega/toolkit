@@ -1,5 +1,3 @@
-"use strict";
-
 import { _CACHE_ } from './cache_base';
 
 export function memoize(fn, args = [], clear = false) {

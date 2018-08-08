@@ -1,5 +1,3 @@
-"use strict";
-
 import { apiURI } from './enviroments';
 
 const environment = process.env.NODE_ENV;

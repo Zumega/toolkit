@@ -1,5 +1,3 @@
-"use strict";
-
 import { _CACHE_ } from './cache_base';
 import Moment from 'react-moment';
 
@@ -13,7 +11,8 @@ const DURATION = {
 let cache = _CACHE_.api;
 
 // cache(<key>).long(<data>);
-export function cache (myKey) {
+// convert to class
+export function Cache (myKey) {
     // TODO: change mid and long to use LOCAL STORAGE
 
     this.get = GET;

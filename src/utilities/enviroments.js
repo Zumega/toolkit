@@ -1,4 +1,4 @@
-"use strict";
+import { environment } from './constants';
 
 export {
   apiURI
